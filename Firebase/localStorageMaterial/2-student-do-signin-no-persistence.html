@@ -104,7 +104,7 @@
       // console.log(hearAbout)
 
       // Output all of the new information into the relevant HTML sections
-      
+
       //clear the local storage
       localStorage.clear();
 
@@ -122,6 +122,8 @@
 
 
     });
+
+    //by default display the data from the local storage
     $("#name-display").text(localStorage.getItem("name"));
     $("#email-display").text(localStorage.getItem("email"));
     $("#age-display").text(localStorage.getItem("age"));
