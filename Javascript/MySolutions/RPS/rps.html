@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock paper or scissors</title>
+</head>
+<body>
+
+<!-- I need the user to make a choice
+I need the computer to make a choice
+Capture these choices
+Compare these chpices, determine win, lose, or tie
+DIsp;lay result to the user -->
+
+<script type="text/javascript">
+
+
+	var options = ["r", "p", "s"];
+	
+	document.onkeyup = function() {
+		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+		console.log(userGuess)
+
+		var compGuess = options[Math.floor(Math.random() * options.length)]
+
+		console.log(compGuess)
+	}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

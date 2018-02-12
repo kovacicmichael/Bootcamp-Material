@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    	var confirmSteak = confirm( "Do you like steak?")
+    	var birthDate = prompt("How old are you?")
+
+
+    	if (confirmSteak && birthDate >= 21) {
+    		document.write("Here's a steak sandwich!!")
+    	} else {
+    		document.write("Here is a tofu stirfry!!")
+    	}
+
+
+    	if (confirmSteak && birthDate < 21) {
+    		document.write ("No steak for you!!!")
+    	}
+    </script>
+</body>
+</html>
