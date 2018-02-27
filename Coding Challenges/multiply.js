@@ -21,42 +21,50 @@
 // console.log("The result is: " + tripleMult(2)(3)(3)(2));
 // console.log("The result is: " + tripleMult(10)(5)(5)(5));
 
+
+var argArray = [];
+
 function tripleMult(x){
+	argArray.push(x);
 	return two;
 	function two(y){
-			return three;
+		argArray.push(y);
+		return three;
 		function three(z){
-			if(z !== undefined){
-			count = 1
-			return rest;
-				function rest(s){
-					console.log("here")
-					return x * y * z * s;
-					count++
-				}
+			for(var i = 0; i < tripleMult(arguments[0]).length; i++){
+				var answer = 1;
+				return answer *= arguments[i];
 			}
-				
-			
+			console.log(argArray)
+			//return x * y * z * arguments[0];
 		}
 	}
 }
+//console.log(argArray)
 
-function multiply(x){
-	var answer = 1;
-	for(var i = 0; i < arguments.length; i++){
-		answer *= arguments[i];
-		//console.log(answer);
-	}
-	return answer
-}
+// function multiply(x){
+// 	var answer = 1;
+// 	for(var i = 0; i < arguments.length; i++){
+// 		answer *= arguments[i];
+// 		//console.log(answer);
+// 	}
+// 	return answer
+// }
 
-console.log(multiply(5, 5, 6, 8))
+console.log(tripleMult(5) (5) (6));
 
 //console.log("The result is: " + tripleMult(2)(3)(3));
 //console.log(tripleMult(3)(3)(4));
 
 
+// var numArr = [];
+// var funArr = [];
 // for(var i = 0; i < 10; ++i){
 //     numArr[numArr.length] = i;
-//     funArr[funArr.length] = function(){  return i; };
+//     funArr[funArr.length] = getFun(i);
+// }
+
+// function getFun(val) {
+//     return keep;
+		//function keep() { return val; };
 // }
