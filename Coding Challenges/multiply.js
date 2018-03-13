@@ -22,24 +22,37 @@
 // console.log("The result is: " + tripleMult(10)(5)(5)(5));
 
 
-var argArray = [];
-
 function tripleMult(x){
-	argArray.push(x);
-	return two;
-	function two(y){
-		argArray.push(y);
-		return three;
-		function three(z){
-			for(var i = 0; i < tripleMult(arguments[0]).length; i++){
-				var answer = 1;
-				return answer *= arguments[i];
-			}
-			console.log(argArray)
-			//return x * y * z * arguments[0];
+	return function(x){
+		return function (x){
+			return tripleMult.prototype.toString = function multToString(x) {
+   						var total = x + x + x
+   						return total;
+   						return tripleMult(x)
+					}
 		}
 	}
 }
+//tripleMult(5)(5)(6)
+// mult1 = new tripleMult(3)(3)(3)
+
+
+// //console.log(mult1)
+
+// tripleMult.prototype.toString = function multToString(x) {
+	
+//    	var total = x + x
+//    	return total;
+// }
+
+console.log(tripleMult(1)(2)(3)(4))
+//console.log(tripleMult.prototype)
+
+
+// console.log(mult1.toString())
+//console.log(tripleMult(5)(5)(6));
+
+
 //console.log(argArray)
 
 // function multiply(x){
@@ -51,7 +64,7 @@ function tripleMult(x){
 // 	return answer
 // }
 
-console.log(tripleMult(5) (5) (6));
+//console.log("5" * "5")
 
 //console.log("The result is: " + tripleMult(2)(3)(3));
 //console.log(tripleMult(3)(3)(4));
