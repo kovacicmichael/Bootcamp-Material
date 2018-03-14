@@ -16,7 +16,7 @@ var employeeName = "";
 var role = "";
 var startDate = "";
 var monthlyRate = "";
-var monthWorked = 0;
+var monthsWorked = 0;
 var totalBill = 0;
 
 
@@ -37,7 +37,7 @@ $("#submit").on("click", function(){
 	role = $("#role").val().trim();
 	startDate = $("#start-date").val().trim();
 	monthlyRate = $("#monthly-rate").val().trim();
-	monthWorked = moment($("#start-input").val().trim(), "DD/MM/YY").format("X");
+	//monthsWorked = moment($("#start-input").val().trim(), "DD/MM/YY").format("X");
 	totalBill = $("rate-input").val()
 
 		
@@ -51,19 +51,39 @@ $("#submit").on("click", function(){
 
 
 	});
-	console.log(startDate);
+	//console.log(startDate);
 
 });
 
 
 database.ref().on("child_added", function(childSnapshot){
+
+
+	var startDate = childSnapshot.val().startDate;
+	var monthlyRate = childSnapshot.val().monthlyRate;
+
+
+	var startConverted = moment(startDate).format("X")
+
+	console.log("___________------------------")
+	console.log(startConverted);
+
+
+	var totalBilled;
+
+
+
+
+
+
+
 	var generateRow = $("<tr>");
 	generateRow.html("<td>" + childSnapshot.val().employeeName + "</td>"
 					+"<td>" + childSnapshot.val().role + "</td>"
 					+"<td>" + childSnapshot.val().startDate + "</td>"
-					+"<td>" + monthWorked + "</td>"
+					+"<td>" + monthsWorked + "</td>"
 					+"<td>" + childSnapshot.val().monthlyRate + "</td>"
-					+"<td>" + totalBill + "</td>");
+					+"<td>" + totalBilled + "</td>");
 	
 
 	$("#add-employee").append(generateRow);
@@ -79,7 +99,7 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
 	generateRow.html("<td>" + snapshot.val().employeeName + "</td>"
 		+"<td>" + snapshot.val().role + "</td>"
 		+"<td>" + snapshot.val().startDate + "</td>"
-		+"<td>" + monthWorked + "</td>"
+		+"<td>" + monthsWorked + "</td>"
 		+"<td>" + snapshot.val().monthlyRate + "</td>"
 		+"<td>" + totalBill + "</td>");
 	
@@ -96,4 +116,4 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
 
 
 
-console.log(moment().format("DD/MM/YY hh:mm A"));
+//console.log(moment().format("DD/MM/YY hh:mm A"));
