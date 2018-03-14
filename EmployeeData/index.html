@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Data Management</title>
+	<!-- Bootstrap CDN-->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid">
+	  		<div class="container">
+	    		<h1 class="display-4 text-center">Employee Data Management</h1>
+	    		<p class="lead text-center">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+	  		</div>
+		</div>
+		<h2>Current Employee</h2>
+		<table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Employee Name</th>
+		      <th scope="col">Role</th>
+		      <th scope="col">Start Date</th>
+		      <th scope="col">Months Worked</th>
+		      <th scope="col">Monthly Rate ($)</th>
+		      <th scope="col">Total Billed ($)</th>
+
+		    </tr>
+		  </thead>
+		  <tbody id="add-employee">
+		    
+
+		  </tbody>
+		</table>
+		<hr>
+		<h2>Add Employee</h2>
+		<form>
+		  <div class="form-group">
+		    <label type="text">Employee Name</label>
+		    <input type="text" class="form-control" id="employee-name" placeholder="Enter Name">
+		  </div>
+		  <div class="form-group">
+		    <label type="text">Role</label>
+		    <input type="text" class="form-control" id="role">
+		  </div>
+		   <div class="form-group">
+		    <label type="text">Start Date (DD/MM/YY - ex: 01/01/18)</label>
+		    <input type="date" class="form-control" id="start-date">
+		  </div>
+		  <div class="form-group">
+		    <label type="text">Monthly Rate</label>
+		    <input type="number" class="form-control" id="monthly-rate">
+		  </div>
+		  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+		</form>
+
+		
+	</div>
+
+	<script type="text/javascript" src="assets/javascript/main.js"></script>
+
+</body>
+</html>
