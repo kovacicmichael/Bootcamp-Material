@@ -61,9 +61,9 @@ database.ref().on("child_added", function(childSnapshot){
 
 	var startDate = childSnapshot.val().startDate;
 	var monthlyRate = childSnapshot.val().monthlyRate;
+	var startFormat = "MM/DD/YYYY"
 
-
-	var startConverted = moment(startDate).format("X")
+	var startConverted = moment(startDate, startFormat).format("x")
 
 	console.log("___________------------------")
 	console.log(startConverted);
