@@ -29,6 +29,7 @@ db.on("error", function(error) {
 // Routes
 // 1. At the root path, send a simple hello world message to the browser
 app.get("/", function(req, res) {
+  console.log("hello world")
   res.send("Hello world");
 });
 
@@ -80,6 +81,6 @@ app.get("/weight", function(req, res) {
 });
 
 // Set the app to listen on port 3000
-app.listen(3000, function() {
-  console.log("App running on port 3000!");
+app.listen(3001, function() {
+  console.log("App running on port 3001!");
 });
